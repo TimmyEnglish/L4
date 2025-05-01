@@ -1,3 +1,5 @@
+/*-------------------------------------- General Styles --------------------------------------*/
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -59,7 +61,7 @@ a {
   color: #333;
 }
 
-/*-------------------------------------- Hero --------------------------------------*/ 
+/*-------------------------------------- Hero Section --------------------------------------*/ 
 
 .hero {
   background-image: url('../images/hero.jpg');
@@ -71,7 +73,7 @@ a {
 }
 
 .hero-text {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.7);
   padding: 40px;
   border-radius: 8px;
   max-width: 600px;
@@ -104,7 +106,8 @@ a {
 .hero .btn:hover {
   background-color: #388e3c;
 }
-/*-------------------------------------- Products, Popular, Reviews --------------------------------------*/ 
+
+/*-------------------------------------- Products, Popular, Reviews Sections --------------------------------------*/ 
 
 .products, 
 .popular {
@@ -135,7 +138,6 @@ a {
 
 .product-grid, 
 .review-grid {
-  
   display: grid;
   grid-template-columns: repeat(4, auto); 
   justify-content: center;
@@ -161,7 +163,7 @@ a {
   border-radius: 12px;
 }
 
-/*--------------------------------------Atmosphere--------------------------------------*/ 
+/*-------------------------------------- Atmosphere Section --------------------------------------*/ 
 
 .atmosphere {
   display: flex;
@@ -196,7 +198,6 @@ a {
   font-size: 22px;
 }
 
-
 .atmosphere .subtitle {
   font-size: 20px;
   color: #2e7d32;
@@ -208,7 +209,6 @@ a {
   padding: 0;
   margin-bottom: 30px;
 }
-
 
 .atmosphere li {
   font-size: 20px;
@@ -242,7 +242,7 @@ a {
   max-width: 100%;
 }
 
-/*--------------------------------------Reviews--------------------------------------*/ 
+/*-------------------------------------- Reviews Section --------------------------------------*/ 
 
 .reviews {
   text-align: center;
@@ -256,7 +256,7 @@ a {
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 20px;
-  }
+}
 
 .review-card {
   background: #fff;
@@ -292,11 +292,8 @@ a {
   color: #555;
   font-size: 18px;
 }
-/*--------------------------------------Popular--------------------------------------*/ 
 
-
-
-/*--------------------------------------Footer--------------------------------------*/ 
+/*-------------------------------------- Footer --------------------------------------*/ 
 
 footer {
   background: #1d1d1d;
@@ -346,3 +343,98 @@ footer hr {
   align-items: center;
   justify-content: space-between;
 }
+
+/*-------------------------------------- Media Queries --------------------------------------*/
+
+/* For tablets (landscape mode) */
+@media screen and (max-width: 1024px) {
+  .product-grid, .review-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .hero-text {
+    padding: 30px;
+    max-width: 80%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero .btn {
+    font-size: 18px;
+    padding: 8px 25px;
+  }
+
+  .atmosphere .text h2 {
+    font-size: 32px;
+  }
+
+  .atmosphere .text .btn {
+    font-size: 20px;
+  }
+
+  .atmosphere li {
+    font-size: 18px;
+  }
+
+  .review-card {
+    width: 220px;
+  }
+
+  .footer-links h4, .footer-links h5 {
+    font-size: 18px;
+  }
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+  .product-grid, .review-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .btn {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .atmosphere {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+  }
+
+  .atmosphere .text h2 {
+    font-size: 28px;
+  }
+
+  .atmosphere .text .btn {
+    font-size: 18px;
+  }
+
+  .atmosphere li {
+    font-size: 16
